@@ -10,12 +10,8 @@ apt-get install -y php5-common php5-cli git zsh wget curl fail2ban tmux nodejs n
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # nodejs
-wget https://nodejs.org/dist/v4.2.2/node-v4.2.2-linux-x64.tar.gz
-tar zxvf node-v4.2.2-linux-x64.tar.gz
-rm node-v4.2.2-linux-x64.tar.gz
-mv node-v4.2.2-linux-x64/ /usr/local/bin/
-ln -s /usr/local/bin/node-v4.2.2-linux-x64/bin/node /usr/bin/node
-ln -s /usr/local/bin/node-v4.2.2-linux-x64/bin/npm /usr/bin/npm
+apt-get install nodejs npm
+ln -s /usr/bin/nodejs /usr/bin/node
 
 # composer
 curl -sS https://getcomposer.org/installer | php
